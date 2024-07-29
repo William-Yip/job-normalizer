@@ -31,33 +31,25 @@ public class LevenshteinScoreTextTest {
 
     @Test
     public void testCompare_EmptyString1() {
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            levenshteinScoreText.compare("", "test");
-        });
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> levenshteinScoreText.compare("", "test"));
         assertEquals("str1 and str2 args cannot be null or empty.", exception.getMessage());
     }
 
     @Test
     public void testCompare_EmptyString2() {
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            levenshteinScoreText.compare("test", "");
-        });
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> levenshteinScoreText.compare("test", ""));
         assertEquals("str1 and str2 args cannot be null or empty.", exception.getMessage());
     }
 
     @Test
     public void testCompare_NullString1() {
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            levenshteinScoreText.compare(null, "test");
-        });
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> levenshteinScoreText.compare(null, "test"));
         assertEquals("str1 and str2 args cannot be null or empty.", exception.getMessage());
     }
 
     @Test
     public void testCompare_NullString2() {
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            levenshteinScoreText.compare("test", null);
-        });
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> levenshteinScoreText.compare("test", null));
         assertEquals("str1 and str2 args cannot be null or empty.", exception.getMessage());
     }
 
